@@ -127,11 +127,14 @@ ResizeIframe = A.Component.create(
 				instance._iframeDoc = null;
 
 				var newHeight = instance._iframeHeight;
-				var iframeWin = instance._iframeEl.contentWindow;
+
+				var iframeWin;
 
 				var iframeDoc;
 
 				try {
+					iframeWin = instance._iframeEl.contentWindow;
+
 					iframeDoc = iframeWin.document;
 
 					instance._iframeDoc = iframeDoc;
