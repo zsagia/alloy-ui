@@ -261,6 +261,18 @@ var TreeNode = A.Component.create(
 			},
 
 			/**
+			 * Path of the TreeNode.
+			 *
+			 * @attribute path
+			 * @default ''
+			 * @type String
+			 */
+			path: {
+				value: BLANK,
+				validator: isString
+			},
+
+			/**
 			 * Label element to house the <code>label</code> attribute.
 			 *
 			 * @attribute labelEl
