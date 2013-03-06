@@ -487,4 +487,4 @@ var ProgressBar = A.Component.create(
 
 A.ProgressBar = ProgressBar;
 
-}, '@VERSION@' ,{requires:['aui-base','aui-aria'], skinnable:true});
+}, '1.5.0' ,{requires:['aui-base','aui-aria'], skinnable:true});

@@ -658,4 +658,4 @@ A.io.request = function(uri, config) {
 	);
 };
 
-}, '@VERSION@' ,{requires:['aui-base','io-base','json','plugin','querystring-stringify']});
+}, '1.5.0' ,{requires:['aui-base','io-base','json','plugin','querystring-stringify']});

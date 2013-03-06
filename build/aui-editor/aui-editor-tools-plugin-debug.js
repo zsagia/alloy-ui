@@ -331,4 +331,4 @@ A.mix(
 
 A.Plugin.EditorTools = EditorTools;
 
-}, '@VERSION@' ,{requires:['aui-base','editor-base']});
+}, '1.5.0' ,{requires:['aui-base','editor-base']});

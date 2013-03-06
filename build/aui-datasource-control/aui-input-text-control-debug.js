@@ -929,4 +929,4 @@ InputTextControl.prototype = {
 
 A.InputTextControl = InputTextControl;
 
-}, '@VERSION@' ,{requires:['aui-base','aui-datasource-control-base','aui-form-combobox']});
+}, '1.5.0' ,{requires:['aui-base','aui-datasource-control-base','aui-form-combobox']});

@@ -405,4 +405,4 @@ A.namespace('HTML5').PrintFix = PrintFix;
 
 PrintFix();
 
-}, '@VERSION@' ,{requires:['aui-node-html5']});
+}, '1.5.0' ,{requires:['aui-node-html5']});

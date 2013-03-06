@@ -85,4 +85,4 @@ A.debounce = function(fn, delay, context, args) {
 	return wrapped;
 };
 
-}, '@VERSION@' ,{skinnable:false});
+}, '1.5.0' ,{skinnable:false});

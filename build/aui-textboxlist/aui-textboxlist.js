@@ -523,4 +523,4 @@ var TextboxListEntry = A.Component.create(
 A.TextboxList = TextboxList;
 A.TextboxListEntry = TextboxListEntry;
 
-}, '@VERSION@' ,{requires:['anim-node-plugin','aui-autocomplete','node-focusmanager'], skinnable:true});
+}, '1.5.0' ,{requires:['anim-node-plugin','aui-autocomplete','node-focusmanager'], skinnable:true});

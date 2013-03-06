@@ -1001,4 +1001,4 @@ A.Rating = Rating;
 A.StarRating = Rating;
 A.ThumbRating = ThumbRating;
 
-}, '@VERSION@' ,{requires:['aui-base'], skinnable:true});
+}, '1.5.0' ,{requires:['aui-base'], skinnable:true});

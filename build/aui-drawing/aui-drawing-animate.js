@@ -775,4 +775,4 @@ Set.prototype.animate = function(params, ms, easing, callback) {
 	return instance;
 };
 
-}, '@VERSION@' ,{requires:['aui-drawing-base']});
+}, '1.5.0' ,{requires:['aui-drawing-base']});

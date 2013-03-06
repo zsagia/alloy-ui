@@ -92,4 +92,4 @@ if (A.Node) {
  * @method void();
  */
 
-}, '@VERSION@' ,{requires:['aui-base']});
+}, '1.5.0' ,{requires:['aui-base']});

@@ -724,4 +724,4 @@ var PortalLayout = A.Component.create(
 
 A.PortalLayout = PortalLayout;
 
-}, '@VERSION@' ,{skinnable:true, requires:['aui-base','dd-drag','dd-delegate','dd-drop','dd-proxy']});
+}, '1.5.0' ,{skinnable:true, requires:['aui-base','dd-drag','dd-delegate','dd-drop','dd-proxy']});

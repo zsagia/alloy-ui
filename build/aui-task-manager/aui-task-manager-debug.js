@@ -210,4 +210,4 @@ A.setTimeout = TaskManager.setTimeout;
 
 A.TaskManager = TaskManager;
 
-}, '@VERSION@' ,{requires:['aui-base'], skinnable:false});
+}, '1.5.0' ,{requires:['aui-base'], skinnable:false});

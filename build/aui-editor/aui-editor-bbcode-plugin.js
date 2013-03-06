@@ -629,4 +629,4 @@ var EditorBBCode = A.Component.create(
 
 A.namespace('Plugin').EditorBBCode = EditorBBCode;
 
-}, '@VERSION@' ,{requires:['aui-base','editor-base']});
+}, '1.5.0' ,{requires:['aui-base','editor-base']});

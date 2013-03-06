@@ -176,4 +176,4 @@ A.receiveMessage = fnReceiveMessage;
 
 A.Messaging = Messaging;
 
-}, '@VERSION@' ,{requires:['aui-base','aui-task-manager','querystring'], skinnable:false});
+}, '1.5.0' ,{requires:['aui-base','aui-task-manager','querystring'], skinnable:false});

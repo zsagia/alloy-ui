@@ -375,4 +375,4 @@ Parse.Simple.Creole.prototype.constructor = Parse.Simple.Creole;
 
 A.CreoleParser = Parse.Simple.Creole;
 
-}, '@VERSION@' ,{requires:['aui-base']});
+}, '1.5.0' ,{requires:['aui-base']});

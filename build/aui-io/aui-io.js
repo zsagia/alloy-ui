@@ -658,7 +658,7 @@ A.io.request = function(uri, config) {
 	);
 };
 
-}, '@VERSION@' ,{requires:['aui-base','io-base','json','plugin','querystring-stringify']});
+}, '1.5.0' ,{requires:['aui-base','io-base','json','plugin','querystring-stringify']});
 AUI.add('aui-io-plugin', function(A) {
 /**
  * The IOPlugin Utility - When plugged to a Node or Widget loads the content
@@ -1210,8 +1210,8 @@ A.Node.prototype.load = function(uri, config, callback) {
 
 A.namespace('Plugin').IO = IOPlugin;
 
-}, '@VERSION@' ,{requires:['aui-overlay-base','aui-parse-content','aui-io-request','aui-loading-mask']});
+}, '1.5.0' ,{requires:['aui-overlay-base','aui-parse-content','aui-io-request','aui-loading-mask']});
 
 
-AUI.add('aui-io', function(A){}, '@VERSION@' ,{use:['aui-io-request','aui-io-plugin'], skinnable:false});
+AUI.add('aui-io', function(A){}, '1.5.0' ,{use:['aui-io-request','aui-io-plugin'], skinnable:false});
 

@@ -197,4 +197,4 @@ DRAWING_PROTOTYPE.print = function(x, y, string, font, size, origin, letterSpaci
 	return out;
 };
 
-}, '@VERSION@' ,{requires:['aui-drawing-base']});
+}, '1.5.0' ,{requires:['aui-drawing-base']});

@@ -178,4 +178,4 @@ var EditorCreoleCode = A.Component.create(
 
 A.namespace('Plugin').EditorCreoleCode = EditorCreoleCode;
 
-}, '@VERSION@' ,{requires:['aui-base','editor-base','aui-editor-html-creole','aui-editor-creole-parser']});
+}, '1.5.0' ,{requires:['aui-base','editor-base','aui-editor-html-creole','aui-editor-creole-parser']});

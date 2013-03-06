@@ -102,4 +102,4 @@ var Select = A.Component.create(
 
 A.Select = Select;
 
-}, '@VERSION@' ,{requires:['aui-form-field']});
+}, '1.5.0' ,{requires:['aui-form-field']});

@@ -2018,4 +2018,4 @@ A.DiagramNodeTask = A.Component.create({
 
 A.DiagramBuilder.types[TASK] = A.DiagramNodeTask;
 
-}, '@VERSION@' ,{skinnable:true, requires:['aui-data-set','aui-diagram-builder-base','aui-diagram-builder-connector','overlay']});
+}, '1.5.0' ,{skinnable:true, requires:['aui-data-set','aui-diagram-builder-base','aui-diagram-builder-connector','overlay']});

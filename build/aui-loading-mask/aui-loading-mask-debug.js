@@ -345,4 +345,4 @@ A.each([HIDE, SHOW, TOGGLE], function(method) {
 
 A.LoadingMask = LoadingMask;
 
-}, '@VERSION@' ,{requires:['aui-overlay-mask','plugin'], skinnable:true});
+}, '1.5.0' ,{requires:['aui-overlay-mask','plugin'], skinnable:true});

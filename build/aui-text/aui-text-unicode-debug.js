@@ -56,4 +56,4 @@ var Unicode = {
 
 Text.Unicode = Unicode;
 
-}, '@VERSION@' ,{requires:['aui-text-data-unicode'], skinnable:false});
+}, '1.5.0' ,{requires:['aui-text-data-unicode'], skinnable:false});

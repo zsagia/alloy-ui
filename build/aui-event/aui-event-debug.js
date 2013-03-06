@@ -252,7 +252,7 @@ A.mix(
 
 A.Event.KeyMap = KeyMap;
 
-}, '@VERSION@' ,{requires:['event']});
+}, '1.5.0' ,{requires:['event']});
 AUI.add('aui-event-input', function(A) {
 /**
  * An object that encapsulates text changed events for textareas and input
@@ -347,7 +347,7 @@ if (A.Node) {
  * @method void();
  */
 
-}, '@VERSION@' ,{requires:['aui-base']});
+}, '1.5.0' ,{requires:['aui-base']});
 AUI.add('aui-event-delegate-change', function(A) {
 var AObject = A.Object,
 	Node = A.Node,
@@ -488,7 +488,7 @@ A.Event.define(
 	true
 );
 
-}, '@VERSION@' ,{requires:['aui-node-base','aui-event-base'], condition: {name: 'aui-event-delegate-change', trigger: 'event-base-ie', ua: 'ie'}});
+}, '1.5.0' ,{requires:['aui-node-base','aui-event-base'], condition: {name: 'aui-event-delegate-change', trigger: 'event-base-ie', ua: 'ie'}});
 AUI.add('aui-event-delegate-submit', function(A) {
 var AObject = A.Object,
 	Node = A.Node,
@@ -678,8 +678,8 @@ A.CustomEvent.prototype._on = function(fn, context, args, when) {
 	return eventHandle;
 };
 
-}, '@VERSION@' ,{requires:['aui-node-base','aui-event-base'], condition: {name: 'aui-event-delegate-submit', trigger: 'event-base-ie', ua: 'ie'}});
+}, '1.5.0' ,{requires:['aui-node-base','aui-event-base'], condition: {name: 'aui-event-delegate-submit', trigger: 'event-base-ie', ua: 'ie'}});
 
 
-AUI.add('aui-event', function(A){}, '@VERSION@' ,{skinnable:false, use:['aui-event-base','aui-event-input']});
+AUI.add('aui-event', function(A){}, '1.5.0' ,{skinnable:false, use:['aui-event-base','aui-event-input']});
 

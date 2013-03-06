@@ -280,7 +280,7 @@ var Toggler = A.Component.create({
 
 A.Toggler = Toggler;
 
-}, '@VERSION@' ,{skinnable:true, requires:['aui-base','transition']});
+}, '1.5.0' ,{skinnable:true, requires:['aui-base','transition']});
 AUI.add('aui-toggler-delegate', function(A) {
 var Lang = A.Lang,
 	isBoolean = Lang.isBoolean,
@@ -466,8 +466,8 @@ var TogglerDelegate = A.Component.create({
 
 A.TogglerDelegate = TogglerDelegate;
 
-}, '@VERSION@' ,{requires:['aui-toggler-base'], skinnable:false});
+}, '1.5.0' ,{requires:['aui-toggler-base'], skinnable:false});
 
 
-AUI.add('aui-toggler', function(A){}, '@VERSION@' ,{skinnable:true, use:['aui-toggler-base','aui-toggler-delegate']});
+AUI.add('aui-toggler', function(A){}, '1.5.0' ,{skinnable:true, use:['aui-toggler-base','aui-toggler-delegate']});
 

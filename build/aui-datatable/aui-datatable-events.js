@@ -239,4 +239,4 @@ var DataTableEvents = A.Base.create("dataTableEvents", A.Plugin.Base, [], {
 
 A.namespace("Plugin").DataTableEvents = DataTableEvents;
 
-}, '@VERSION@' ,{requires:['aui-datatable-base']});
+}, '1.5.0' ,{requires:['aui-datatable-base']});

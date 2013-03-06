@@ -705,4 +705,4 @@ A.extend(
 
 A.DataSet = DataSet;
 
-}, '@VERSION@' ,{requires:['oop','collection','base'], skinnable:false});
+}, '1.5.0' ,{requires:['oop','collection','base'], skinnable:false});

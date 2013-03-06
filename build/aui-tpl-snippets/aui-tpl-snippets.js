@@ -14,7 +14,7 @@ A.TplSnippets = {
 	}
 };
 
-}, '@VERSION@' ,{requires:['aui-template'], skinnable:false});
+}, '1.5.0' ,{requires:['aui-template'], skinnable:false});
 AUI.add('aui-tpl-snippets-select', function(A) {
 A.Template.register(
 	'select',
@@ -30,7 +30,7 @@ A.Template.register(
 	]
 );
 
-}, '@VERSION@' ,{requires:['aui-tpl-snippets-base'], skinnable:false});
+}, '1.5.0' ,{requires:['aui-tpl-snippets-base'], skinnable:false});
 AUI.add('aui-tpl-snippets-input', function(A) {
 A.Template.register(
 	'input',
@@ -42,7 +42,7 @@ A.Template.register(
 	]
 );
 
-}, '@VERSION@' ,{requires:['aui-tpl-snippets-base'], skinnable:false});
+}, '1.5.0' ,{requires:['aui-tpl-snippets-base'], skinnable:false});
 AUI.add('aui-tpl-snippets-textarea', function(A) {
 A.Template.register(
 	'textarea',
@@ -54,7 +54,7 @@ A.Template.register(
 	]
 );
 
-}, '@VERSION@' ,{requires:['aui-tpl-snippets-base'], skinnable:false});
+}, '1.5.0' ,{requires:['aui-tpl-snippets-base'], skinnable:false});
 AUI.add('aui-tpl-snippets-checkbox', function(A) {
 A.Template.register(
 	'checkbox',
@@ -66,8 +66,8 @@ A.Template.register(
 	]
 );
 
-}, '@VERSION@' ,{requires:['aui-tpl-snippets-base'], skinnable:false});
+}, '1.5.0' ,{requires:['aui-tpl-snippets-base'], skinnable:false});
 
 
-AUI.add('aui-tpl-snippets', function(A){}, '@VERSION@' ,{skinnable:false, use:['aui-tpl-snippets-base','aui-tpl-snippets-select','aui-tpl-snippets-input','aui-tpl-snippets-textarea','aui-tpl-snippets-checkbox']});
+AUI.add('aui-tpl-snippets', function(A){}, '1.5.0' ,{skinnable:false, use:['aui-tpl-snippets-base','aui-tpl-snippets-select','aui-tpl-snippets-input','aui-tpl-snippets-textarea','aui-tpl-snippets-checkbox']});
 

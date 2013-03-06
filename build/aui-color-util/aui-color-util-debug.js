@@ -565,4 +565,4 @@ ColorUtil.RGB.prototype = {
 
 A.ColorUtil = ColorUtil;
 
-}, '@VERSION@' ,{skinnable:false});
+}, '1.5.0' ,{skinnable:false});

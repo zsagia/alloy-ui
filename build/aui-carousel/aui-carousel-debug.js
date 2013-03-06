@@ -505,4 +505,4 @@ var Carousel = A.Component.create(
 
 A.Carousel = Carousel;
 
-}, '@VERSION@' ,{skinnable:true, requires:['aui-base','aui-template','anim']});
+}, '1.5.0' ,{skinnable:true, requires:['aui-base','aui-template','anim']});

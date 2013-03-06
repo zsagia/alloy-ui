@@ -37,4 +37,4 @@ A.MediaGalleryPlugin = MediaGalleryPlugin;
 
 A.MediaGallery = A.ImageGallery;
 
-}, '@VERSION@' ,{skinnable:false, requires:['aui-media-viewer-plugin','aui-image-viewer-gallery']});
+}, '1.5.0' ,{skinnable:false, requires:['aui-media-viewer-plugin','aui-image-viewer-gallery']});

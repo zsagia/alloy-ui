@@ -332,4 +332,4 @@ var Scroller = A.Component.create (
 
 A.Scroller = Scroller;
 
-}, '@VERSION@' ,{requires:['aui-base','aui-simple-anim'], skinnable:true});
+}, '1.5.0' ,{requires:['aui-base','aui-simple-anim'], skinnable:true});

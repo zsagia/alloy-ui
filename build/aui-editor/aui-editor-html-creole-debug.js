@@ -416,4 +416,4 @@ var HTML2CreoleConvertor = A.Component.create(
 
 A.HTML2CreoleConvertor = HTML2CreoleConvertor;
 
-}, '@VERSION@' ,{requires:['aui-editor-base']});
+}, '1.5.0' ,{requires:['aui-editor-base']});

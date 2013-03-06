@@ -104,4 +104,4 @@ var Lang = A.Lang,
 		}
 	);
 
-}, '@VERSION@' ,{requires:['selector-css3'], skinnable:false});
+}, '1.5.0' ,{requires:['selector-css3'], skinnable:false});

@@ -600,4 +600,4 @@ var ButtonItem = A.Component.create(
 
 A.ButtonItem = ButtonItem;
 
-}, '@VERSION@' ,{requires:['aui-base','aui-state-interaction','widget-child'], skinnable:true});
+}, '1.5.0' ,{requires:['aui-base','aui-state-interaction','widget-child'], skinnable:true});

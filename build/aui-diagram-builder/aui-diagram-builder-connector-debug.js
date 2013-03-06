@@ -636,4 +636,4 @@ A.Connector = A.Base.create('line', A.Base, [], {
 	}
 });
 
-}, '@VERSION@' ,{skinnable:true, requires:['aui-base','aui-template','arraylist-add','arraylist-filter','json','graphics','dd']});
+}, '1.5.0' ,{skinnable:true, requires:['aui-base','aui-template','arraylist-add','arraylist-filter','json','graphics','dd']});

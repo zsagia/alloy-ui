@@ -79,4 +79,4 @@ var Combobox = A.Component.create(
 
 A.Combobox = Combobox;
 
-}, '@VERSION@' ,{skinnable:true, requires:['aui-form-textarea','aui-toolbar']});
+}, '1.5.0' ,{skinnable:true, requires:['aui-form-textarea','aui-toolbar']});

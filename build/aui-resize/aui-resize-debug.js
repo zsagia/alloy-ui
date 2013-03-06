@@ -1409,7 +1409,7 @@ A.each(ALL_HANDLES, function(handle, i) {
 
 A.Resize = Resize;
 
-}, '@VERSION@' ,{skinnable:true, requires:['aui-base','dd-drag','dd-delegate','dd-drop']});
+}, '1.5.0' ,{skinnable:true, requires:['aui-base','dd-drag','dd-delegate','dd-drop']});
 AUI.add('aui-resize-constrain', function(A) {
 var Lang = A.Lang,
 	isBoolean = Lang.isBoolean,
@@ -1868,8 +1868,8 @@ A.extend(ResizeConstrained, A.Plugin.Base, {
 A.namespace('Plugin');
 A.Plugin.ResizeConstrained = ResizeConstrained;
 
-}, '@VERSION@' ,{requires:['aui-resize-base','dd-constrain','plugin'], skinnable:false});
+}, '1.5.0' ,{requires:['aui-resize-base','dd-constrain','plugin'], skinnable:false});
 
 
-AUI.add('aui-resize', function(A){}, '@VERSION@' ,{use:['aui-resize-base','aui-resize-constrain'], skinnable:true});
+AUI.add('aui-resize', function(A){}, '1.5.0' ,{use:['aui-resize-base','aui-resize-constrain'], skinnable:true});
 

@@ -228,4 +228,4 @@ var Textarea = A.Component.create(
 
 A.Textarea = Textarea;
 
-}, '@VERSION@' ,{skinnable:true, requires:['aui-form-textfield']});
+}, '1.5.0' ,{skinnable:true, requires:['aui-form-textfield']});

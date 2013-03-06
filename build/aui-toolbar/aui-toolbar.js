@@ -355,4 +355,4 @@ WidgetParentId.prototype = {
 
 A.Toolbar = A.Component.build(NAME, Toolbar, [A.WidgetParent, WidgetParentId], { dynamic: false });
 
-}, '@VERSION@' ,{requires:['aui-base','aui-button-item','aui-data-set','widget-parent'], skinnable:true});
+}, '1.5.0' ,{requires:['aui-base','aui-button-item','aui-data-set','widget-parent'], skinnable:true});

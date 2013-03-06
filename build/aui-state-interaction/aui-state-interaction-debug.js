@@ -197,4 +197,4 @@ var StateInteraction = A.Component.create(
 
 A.namespace('Plugin').StateInteraction = StateInteraction;
 
-}, '@VERSION@' ,{skinnable:false, requires:['aui-base','plugin']});
+}, '1.5.0' ,{skinnable:false, requires:['aui-base','plugin']});

@@ -298,4 +298,4 @@ A.MediaViewerPlugin = MediaViewerPlugin;
 
 A.MediaViewer = A.ImageViewer;
 
-}, '@VERSION@' ,{requires:['aui-image-viewer-base'], skinnable:false});
+}, '1.5.0' ,{requires:['aui-image-viewer-base'], skinnable:false});

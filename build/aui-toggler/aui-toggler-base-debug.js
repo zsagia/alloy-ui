@@ -280,4 +280,4 @@ var Toggler = A.Component.create({
 
 A.Toggler = Toggler;
 
-}, '@VERSION@' ,{skinnable:true, requires:['aui-base','transition']});
+}, '1.5.0' ,{skinnable:true, requires:['aui-base','transition']});

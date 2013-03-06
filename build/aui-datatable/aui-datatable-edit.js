@@ -1435,4 +1435,4 @@ var DateCellEditor = A.Component.create({
 
 A.DateCellEditor = DateCellEditor;
 
-}, '@VERSION@' ,{skinnable:true, requires:['aui-calendar','aui-datatable-events','aui-toolbar','aui-form-validator','overlay','sortable']});
+}, '1.5.0' ,{skinnable:true, requires:['aui-calendar','aui-datatable-events','aui-toolbar','aui-form-validator','overlay','sortable']});

@@ -27,4 +27,4 @@ A.mix(
 	}
 );
 
-}, '@VERSION@' ,{skinnable:false, requires:['arraysort']});
+}, '1.5.0' ,{skinnable:false, requires:['arraysort']});

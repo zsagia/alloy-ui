@@ -776,7 +776,7 @@ A.FormBuilder = FormBuilder;
 
 A.FormBuilder.types = {};
 
-}, '@VERSION@' ,{skinnable:true, requires:['aui-base','aui-button-item','aui-data-set','aui-diagram-builder-base','aui-nested-list','aui-tabs']});
+}, '1.5.0' ,{skinnable:true, requires:['aui-base','aui-button-item','aui-data-set','aui-diagram-builder-base','aui-nested-list','aui-tabs']});
 AUI.add('aui-form-builder-field', function(A) {
 var L = A.Lang,
 	isArray = L.isArray,
@@ -2764,8 +2764,8 @@ A.FormBuilderTextAreaField = FormBuilderTextAreaField;
 
 A.FormBuilder.types['textarea'] = A.FormBuilderTextAreaField;
 
-}, '@VERSION@' ,{skinnable:true, requires:['aui-datatype','aui-panel','aui-tooltip']});
+}, '1.5.0' ,{skinnable:true, requires:['aui-datatype','aui-panel','aui-tooltip']});
 
 
-AUI.add('aui-form-builder', function(A){}, '@VERSION@' ,{skinnable:true, use:['aui-form-builder-base','aui-form-builder-field']});
+AUI.add('aui-form-builder', function(A){}, '1.5.0' ,{skinnable:true, use:['aui-form-builder-base','aui-form-builder-field']});
 

@@ -30,7 +30,7 @@ A.OverlayBase = A.Component.create(
 	}
 );
 
-}, '@VERSION@' ,{requires:['aui-component','widget-position','widget-stack','widget-position-align','widget-position-constrain','widget-stdmod']});
+}, '1.5.0' ,{requires:['aui-component','widget-position','widget-stack','widget-position-align','widget-position-constrain','widget-stdmod']});
 AUI.add('aui-overlay-context', function(A) {
 /**
  * The OverlayContext Utility
@@ -836,7 +836,7 @@ A.OverlayContextManager = new A.OverlayManager({});
 
 A.on(MOUSEDOWN, function() { A.OverlayContextManager.hideAll(); }, A.getDoc());
 
-}, '@VERSION@' ,{requires:['aui-overlay-manager','aui-delayed-task','aui-aria']});
+}, '1.5.0' ,{requires:['aui-overlay-manager','aui-delayed-task','aui-aria']});
 AUI.add('aui-overlay-context-panel', function(A) {
 /**
  * The OverlayContextPanel Utility
@@ -1378,7 +1378,7 @@ A.OverlayContextPanelManager = new A.OverlayManager({
 	zIndexBase: 1000
 });
 
-}, '@VERSION@' ,{skinnable:true, requires:['aui-overlay-context','anim']});
+}, '1.5.0' ,{skinnable:true, requires:['aui-overlay-context','anim']});
 AUI.add('aui-overlay-manager', function(A) {
 /**
  * The OverlayManager Utility
@@ -1708,7 +1708,7 @@ var Lang = A.Lang,
 
 	A.OverlayManager = OverlayManager;
 
-}, '@VERSION@' ,{requires:['aui-base','aui-overlay-base','overlay','plugin']});
+}, '1.5.0' ,{requires:['aui-base','aui-overlay-base','overlay','plugin']});
 AUI.add('aui-overlay-mask', function(A) {
 /**
  * The OverlayMask Utility
@@ -2092,8 +2092,8 @@ var OverlayMask = A.Component.create(
 
 A.OverlayMask = OverlayMask;
 
-}, '@VERSION@' ,{skinnable:true, requires:['aui-base','aui-overlay-base','event-resize']});
+}, '1.5.0' ,{skinnable:true, requires:['aui-base','aui-overlay-base','event-resize']});
 
 
-AUI.add('aui-overlay', function(A){}, '@VERSION@' ,{skinnable:true, use:['aui-overlay-base','aui-overlay-context','aui-overlay-context-panel','aui-overlay-manager','aui-overlay-mask']});
+AUI.add('aui-overlay', function(A){}, '1.5.0' ,{skinnable:true, use:['aui-overlay-base','aui-overlay-context','aui-overlay-context-panel','aui-overlay-manager','aui-overlay-mask']});
 

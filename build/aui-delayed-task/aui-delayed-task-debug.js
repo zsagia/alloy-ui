@@ -187,4 +187,4 @@ DelayedTask.prototype = {
 
 A.DelayedTask = DelayedTask;
 
-}, '@VERSION@' ,{skinnable:false});
+}, '1.5.0' ,{skinnable:false});

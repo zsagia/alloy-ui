@@ -350,4 +350,4 @@ var TabViewMenu = A.Component.create(
 
 A.namespace('Plugin').TabViewMenu = TabViewMenu;
 
-}, '@VERSION@' ,{requires:['aui-component','aui-state-interaction','aui-tabs-base','aui-overlay-context','plugin']});
+}, '1.5.0' ,{requires:['aui-component','aui-state-interaction','aui-tabs-base','aui-overlay-context','plugin']});

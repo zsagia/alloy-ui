@@ -252,4 +252,4 @@ A.mix(
 
 A.Event.KeyMap = KeyMap;
 
-}, '@VERSION@' ,{requires:['event']});
+}, '1.5.0' ,{requires:['event']});

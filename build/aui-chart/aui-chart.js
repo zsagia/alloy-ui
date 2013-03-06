@@ -1120,4 +1120,4 @@ A.extend(
 
 A.Chart.StackedColumnSeries = StackedColumnSeries;
 
-}, '@VERSION@' ,{skinnable:false, requires:['datasource','aui-swf','json']});
+}, '1.5.0' ,{skinnable:false, requires:['datasource','aui-swf','json']});

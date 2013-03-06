@@ -1985,4 +1985,4 @@ A.FormBuilderTextAreaField = FormBuilderTextAreaField;
 
 A.FormBuilder.types['textarea'] = A.FormBuilderTextAreaField;
 
-}, '@VERSION@' ,{skinnable:true, requires:['aui-datatype','aui-panel','aui-tooltip']});
+}, '1.5.0' ,{skinnable:true, requires:['aui-datatype','aui-panel','aui-tooltip']});

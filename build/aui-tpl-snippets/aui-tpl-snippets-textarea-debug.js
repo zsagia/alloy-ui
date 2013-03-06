@@ -9,4 +9,4 @@ A.Template.register(
 	]
 );
 
-}, '@VERSION@' ,{requires:['aui-tpl-snippets-base'], skinnable:false});
+}, '1.5.0' ,{requires:['aui-tpl-snippets-base'], skinnable:false});

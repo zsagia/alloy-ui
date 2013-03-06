@@ -1409,4 +1409,4 @@ A.each(ALL_HANDLES, function(handle, i) {
 
 A.Resize = Resize;
 
-}, '@VERSION@' ,{skinnable:true, requires:['aui-base','dd-drag','dd-delegate','dd-drop']});
+}, '1.5.0' ,{skinnable:true, requires:['aui-base','dd-drag','dd-delegate','dd-drop']});

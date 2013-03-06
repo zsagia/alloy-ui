@@ -843,4 +843,4 @@ var ColorPicker = A.Component.create(
 
 A.ColorPicker = ColorPicker;
 
-}, '@VERSION@' ,{skinnable:true, requires:['aui-overlay-context','dd-drag','slider','aui-button-item','aui-color-util','aui-form-base','aui-panel']});
+}, '1.5.0' ,{skinnable:true, requires:['aui-overlay-context','dd-drag','slider','aui-button-item','aui-color-util','aui-form-base','aui-panel']});

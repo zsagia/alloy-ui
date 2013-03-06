@@ -1871,4 +1871,4 @@ Drawing.Element = Element;
 
 A.Drawing = Drawing;
 
-}, '@VERSION@' ,{requires:['aui-base','aui-color-util','substitute']});
+}, '1.5.0' ,{requires:['aui-base','aui-color-util','substitute']});

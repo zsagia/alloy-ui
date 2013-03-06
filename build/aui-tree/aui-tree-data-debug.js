@@ -795,4 +795,4 @@ A.mix(TreeData.prototype, {
 
 A.TreeData = TreeData;
 
-}, '@VERSION@' ,{requires:['aui-base'], skinnable:false});
+}, '1.5.0' ,{requires:['aui-base'], skinnable:false});

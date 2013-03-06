@@ -205,4 +205,4 @@ DataSourceControl.prototype = {
 
 A.DataSourceControl = DataSourceControl;
 
-}, '@VERSION@' ,{requires:['aui-base','datasource','dataschema']});
+}, '1.5.0' ,{requires:['aui-base','datasource','dataschema']});

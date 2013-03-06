@@ -833,4 +833,4 @@ var ImageGallery = A.Component.create(
 
 A.ImageGallery = ImageGallery;
 
-}, '@VERSION@' ,{skinnable:true, requires:['aui-image-viewer-base','aui-paginator','aui-toolbar']});
+}, '1.5.0' ,{skinnable:true, requires:['aui-image-viewer-base','aui-paginator','aui-toolbar']});

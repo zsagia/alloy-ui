@@ -183,4 +183,4 @@ var TogglerDelegate = A.Component.create({
 
 A.TogglerDelegate = TogglerDelegate;
 
-}, '@VERSION@' ,{requires:['aui-toggler-base'], skinnable:false});
+}, '1.5.0' ,{requires:['aui-toggler-base'], skinnable:false});

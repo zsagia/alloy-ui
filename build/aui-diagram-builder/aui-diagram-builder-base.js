@@ -792,4 +792,4 @@ var DiagramBuilderBase = A.Component.create(
 
 A.DiagramBuilderBase = DiagramBuilderBase;
 
-}, '@VERSION@' ,{skinnable:true, requires:['aui-tabs','aui-property-list','collection','dd']});
+}, '1.5.0' ,{skinnable:true, requires:['aui-tabs','aui-property-list','collection','dd']});

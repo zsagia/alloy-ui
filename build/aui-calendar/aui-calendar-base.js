@@ -1489,4 +1489,4 @@ var Calendar = A.Component.create(
 
 A.Calendar = A.augment(Calendar, A.WidgetStdMod);
 
-}, '@VERSION@' ,{requires:['aui-overlay-context','datatype-date','widget-locale'], skinnable:true});
+}, '1.5.0' ,{requires:['aui-overlay-context','datatype-date','widget-locale'], skinnable:true});

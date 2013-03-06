@@ -307,7 +307,7 @@ A.namespace('Text.Data').Unicode = {
     'InSpecials': '^[\uFFF0-\uFFFF]+$'
 };
 
-}, '@VERSION@' ,{requires:['text'], skinnable:false});
+}, '1.5.0' ,{requires:['text'], skinnable:false});
 AUI.add('aui-text-unicode', function(A) {
 /**
  * Utility for testing strings against unicode patterns.
@@ -366,8 +366,8 @@ var Unicode = {
 
 Text.Unicode = Unicode;
 
-}, '@VERSION@' ,{requires:['aui-text-data-unicode'], skinnable:false});
+}, '1.5.0' ,{requires:['aui-text-data-unicode'], skinnable:false});
 
 
-AUI.add('aui-text', function(A){}, '@VERSION@' ,{use:['aui-text-data-unicode', 'aui-text-unicode'], skinnable:false});
+AUI.add('aui-text', function(A){}, '1.5.0' ,{use:['aui-text-data-unicode', 'aui-text-unicode'], skinnable:false});
 

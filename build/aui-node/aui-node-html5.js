@@ -88,4 +88,4 @@ if (A.UA.ie) {
 	A.Do.before(HTML5._doBeforeCreate, A.DOM, '_create', A.DOM);
 }
 
-}, '@VERSION@' ,{requires:['collection','aui-base']});
+}, '1.5.0' ,{requires:['collection','aui-base']});

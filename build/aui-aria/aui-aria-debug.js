@@ -369,4 +369,4 @@ A.Plugin.Aria.W3C_ATTRIBUTES = {
 	'valuetext': 1
 };
 
-}, '@VERSION@' ,{requires:['aui-base','plugin'], skinnable:false});
+}, '1.5.0' ,{requires:['aui-base','plugin'], skinnable:false});

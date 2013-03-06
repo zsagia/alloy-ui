@@ -616,4 +616,4 @@ var Lang = A.Lang,
 
 	A.Template = Template;
 
-}, '@VERSION@' ,{requires:['aui-base'], skinnable:false});
+}, '1.5.0' ,{requires:['aui-base'], skinnable:false});

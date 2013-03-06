@@ -776,4 +776,4 @@ A.FormBuilder = FormBuilder;
 
 A.FormBuilder.types = {};
 
-}, '@VERSION@' ,{skinnable:true, requires:['aui-base','aui-button-item','aui-data-set','aui-diagram-builder-base','aui-nested-list','aui-tabs']});
+}, '1.5.0' ,{skinnable:true, requires:['aui-base','aui-button-item','aui-data-set','aui-diagram-builder-base','aui-nested-list','aui-tabs']});

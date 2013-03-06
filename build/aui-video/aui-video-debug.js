@@ -265,4 +265,4 @@ var Video = A.Component.create(
 
 A.Video = Video;
 
-}, '@VERSION@' ,{skinnable:true, requires:['aui-base','querystring-stringify-simple']});
+}, '1.5.0' ,{skinnable:true, requires:['aui-base','querystring-stringify-simple']});

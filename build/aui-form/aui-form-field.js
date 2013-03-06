@@ -584,4 +584,4 @@ var Field = A.Component.create(
 
 A.Field = Field;
 
-}, '@VERSION@' ,{requires:['aui-base','aui-component']});
+}, '1.5.0' ,{requires:['aui-base','aui-component']});

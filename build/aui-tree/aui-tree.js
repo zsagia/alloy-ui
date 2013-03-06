@@ -795,7 +795,7 @@ A.mix(TreeData.prototype, {
 
 A.TreeData = TreeData;
 
-}, '@VERSION@' ,{requires:['aui-base'], skinnable:false});
+}, '1.5.0' ,{requires:['aui-base'], skinnable:false});
 AUI.add('aui-tree-node', function(A) {
 /**
  * The TreeNode Utility
@@ -2662,7 +2662,7 @@ A.TreeNode.nodeTypes = {
 	io: A.TreeNodeIO
 };
 
-}, '@VERSION@' ,{requires:['aui-tree-data','aui-io','json','querystring-stringify'], skinnable:false});
+}, '1.5.0' ,{requires:['aui-tree-data','aui-io','json','querystring-stringify'], skinnable:false});
 AUI.add('aui-tree-view', function(A) {
 /**
  * The TreeView Utility
@@ -3651,8 +3651,8 @@ var TreeViewDD = A.Component.create(
 
 A.TreeViewDD = TreeViewDD;
 
-}, '@VERSION@' ,{skinnable:true, requires:['aui-tree-node','dd-drag','dd-drop','dd-proxy']});
+}, '1.5.0' ,{skinnable:true, requires:['aui-tree-node','dd-drag','dd-drop','dd-proxy']});
 
 
-AUI.add('aui-tree', function(A){}, '@VERSION@' ,{skinnable:true, use:['aui-tree-data', 'aui-tree-node', 'aui-tree-view']});
+AUI.add('aui-tree', function(A){}, '1.5.0' ,{skinnable:true, use:['aui-tree-data', 'aui-tree-node', 'aui-tree-view']});
 

@@ -614,7 +614,7 @@ var TabView = A.Component.create(
 
 A.TabView = TabView;
 
-}, '@VERSION@' ,{skinnable:true, requires:['aui-component','aui-state-interaction']});
+}, '1.5.0' ,{skinnable:true, requires:['aui-component','aui-state-interaction']});
 AUI.add('aui-tabs-menu-plugin', function(A) {
 var Lang = A.Lang,
 
@@ -967,8 +967,8 @@ var TabViewMenu = A.Component.create(
 
 A.namespace('Plugin').TabViewMenu = TabViewMenu;
 
-}, '@VERSION@' ,{requires:['aui-component','aui-state-interaction','aui-tabs-base','aui-overlay-context','plugin']});
+}, '1.5.0' ,{requires:['aui-component','aui-state-interaction','aui-tabs-base','aui-overlay-context','plugin']});
 
 
-AUI.add('aui-tabs', function(A){}, '@VERSION@' ,{skinnable:true, use:['aui-tabs-base','aui-tabs-menu-plugin']});
+AUI.add('aui-tabs', function(A){}, '1.5.0' ,{skinnable:true, use:['aui-tabs-base','aui-tabs-menu-plugin']});
 

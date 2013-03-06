@@ -121,4 +121,4 @@ var Textfield = A.Component.create(
 
 A.Textfield = Textfield;
 
-}, '@VERSION@' ,{requires:['aui-form-field']});
+}, '1.5.0' ,{requires:['aui-form-field']});

@@ -549,4 +549,4 @@ A.Node.prototype.load = function(uri, config, callback) {
 
 A.namespace('Plugin').IO = IOPlugin;
 
-}, '@VERSION@' ,{requires:['aui-overlay-base','aui-parse-content','aui-io-request','aui-loading-mask']});
+}, '1.5.0' ,{requires:['aui-overlay-base','aui-parse-content','aui-io-request','aui-loading-mask']});

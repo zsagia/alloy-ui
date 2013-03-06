@@ -154,4 +154,4 @@ A.Plugin.RecordsetSort.prototype._defSortFn = function(event) {
     instance.set('lastSortProperties', event);
 };
 
-}, '@VERSION@' ,{skinnable:true, requires:['aui-base','datatable','plugin']});
+}, '1.5.0' ,{skinnable:true, requires:['aui-base','datatable','plugin']});

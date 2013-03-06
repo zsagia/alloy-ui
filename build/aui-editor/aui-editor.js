@@ -78,7 +78,7 @@ var Editor = A.Component.create(
 
 A.Editor = Editor;
 
-}, '@VERSION@' ,{requires:['aui-base','editor-base','aui-editor-toolbar-plugin']});
+}, '1.5.0' ,{requires:['aui-base','editor-base','aui-editor-toolbar-plugin']});
 AUI.add('aui-editor-tools-plugin', function(A) {
 var Lang = A.Lang,
 	UA = A.UA,
@@ -412,7 +412,7 @@ A.mix(
 
 A.Plugin.EditorTools = EditorTools;
 
-}, '@VERSION@' ,{requires:['aui-base','editor-base']});
+}, '1.5.0' ,{requires:['aui-base','editor-base']});
 AUI.add('aui-editor-menu-plugin', function(A) {
 var Lang = A.Lang,
 	isString = Lang.isString,
@@ -627,7 +627,7 @@ var EditorMenuPlugin = A.Component.create(
 
 A.namespace('Plugin').EditorMenu = EditorMenuPlugin;
 
-}, '@VERSION@' ,{requires:['aui-base','editor-base','aui-overlay-context','aui-panel','aui-editor-tools-plugin']});
+}, '1.5.0' ,{requires:['aui-base','editor-base','aui-overlay-context','aui-panel','aui-editor-tools-plugin']});
 AUI.add('aui-editor-toolbar-plugin', function(A) {
 var Lang = A.Lang,
 	isArray = Lang.isArray,
@@ -2173,7 +2173,7 @@ GROUPS[TEXT] = {
 
 A.namespace('Plugin').EditorToolbar = EditorToolbar;
 
-}, '@VERSION@' ,{requires:['aui-base','aui-button-item','aui-color-picker','aui-editor-menu-plugin','aui-editor-tools-plugin','aui-form-select','aui-overlay-context-panel','aui-panel','aui-toolbar','createlink-base','editor-lists','editor-base','plugin']});
+}, '1.5.0' ,{requires:['aui-base','aui-button-item','aui-color-picker','aui-editor-menu-plugin','aui-editor-tools-plugin','aui-form-select','aui-overlay-context-panel','aui-panel','aui-toolbar','createlink-base','editor-lists','editor-base','plugin']});
 AUI.add('aui-editor-bbcode-plugin', function(A) {
 var Lang = A.Lang,
 	isArray = Lang.isArray,
@@ -2805,7 +2805,7 @@ var EditorBBCode = A.Component.create(
 
 A.namespace('Plugin').EditorBBCode = EditorBBCode;
 
-}, '@VERSION@' ,{requires:['aui-base','editor-base']});
+}, '1.5.0' ,{requires:['aui-base','editor-base']});
 AUI.add('aui-editor-creole-parser', function(A) {
 /*
  * JavaScript Creole 1.0 Wiki Markup Parser
@@ -3183,7 +3183,7 @@ Parse.Simple.Creole.prototype.constructor = Parse.Simple.Creole;
 
 A.CreoleParser = Parse.Simple.Creole;
 
-}, '@VERSION@' ,{requires:['aui-base']});
+}, '1.5.0' ,{requires:['aui-base']});
 AUI.add('aui-editor-html-creole', function(A) {
 var Lang = A.Lang;
 
@@ -3602,7 +3602,7 @@ var HTML2CreoleConvertor = A.Component.create(
 
 A.HTML2CreoleConvertor = HTML2CreoleConvertor;
 
-}, '@VERSION@' ,{requires:['aui-editor-base']});
+}, '1.5.0' ,{requires:['aui-editor-base']});
 AUI.add('aui-editor-creole-plugin', function(A) {
 var Lang = A.Lang,
 	isArray = Lang.isArray,
@@ -3783,8 +3783,8 @@ var EditorCreoleCode = A.Component.create(
 
 A.namespace('Plugin').EditorCreoleCode = EditorCreoleCode;
 
-}, '@VERSION@' ,{requires:['aui-base','editor-base','aui-editor-html-creole','aui-editor-creole-parser']});
+}, '1.5.0' ,{requires:['aui-base','editor-base','aui-editor-html-creole','aui-editor-creole-parser']});
 
 
-AUI.add('aui-editor', function(A){}, '@VERSION@' ,{use:['aui-editor-base','aui-editor-tools-plugin','aui-editor-menu-plugin','aui-editor-toolbar-plugin','aui-editor-bbcode-plugin','aui-editor-creole-parser','aui-editor-creole-plugin'], skinnable:true});
+AUI.add('aui-editor', function(A){}, '1.5.0' ,{use:['aui-editor-base','aui-editor-tools-plugin','aui-editor-menu-plugin','aui-editor-toolbar-plugin','aui-editor-bbcode-plugin','aui-editor-creole-parser','aui-editor-creole-plugin'], skinnable:true});
 

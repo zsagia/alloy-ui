@@ -1955,4 +1955,4 @@ Calendar.EMPTY_DATES = EMPTY_DATES;
 
 A.Calendar = A.Base.create(CALENDAR, Calendar, [A.WidgetStdMod]);
 
-}, '@VERSION@' ,{skinnable:true, requires:['aui-base','aui-datatype','widget-stdmod','datatype-date','widget-locale']});
+}, '1.5.0' ,{skinnable:true, requires:['aui-base','aui-datatype','widget-stdmod','datatype-date','widget-locale']});

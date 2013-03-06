@@ -792,7 +792,7 @@ var DiagramBuilderBase = A.Component.create(
 
 A.DiagramBuilderBase = DiagramBuilderBase;
 
-}, '@VERSION@' ,{skinnable:true, requires:['aui-tabs','aui-property-list','collection','dd']});
+}, '1.5.0' ,{skinnable:true, requires:['aui-tabs','aui-property-list','collection','dd']});
 AUI.add('aui-diagram-builder-impl', function(A) {
 var Lang = A.Lang,
 	isArray = Lang.isArray,
@@ -2813,7 +2813,7 @@ A.DiagramNodeTask = A.Component.create({
 
 A.DiagramBuilder.types[TASK] = A.DiagramNodeTask;
 
-}, '@VERSION@' ,{skinnable:true, requires:['aui-data-set','aui-diagram-builder-base','aui-diagram-builder-connector','overlay']});
+}, '1.5.0' ,{skinnable:true, requires:['aui-data-set','aui-diagram-builder-base','aui-diagram-builder-connector','overlay']});
 AUI.add('aui-diagram-builder-connector', function(A) {
 var Lang = A.Lang,
 	isArray = Lang.isArray,
@@ -3452,8 +3452,8 @@ A.Connector = A.Base.create('line', A.Base, [], {
 	}
 });
 
-}, '@VERSION@' ,{skinnable:true, requires:['aui-base','aui-template','arraylist-add','arraylist-filter','json','graphics','dd']});
+}, '1.5.0' ,{skinnable:true, requires:['aui-base','aui-template','arraylist-add','arraylist-filter','json','graphics','dd']});
 
 
-AUI.add('aui-diagram-builder', function(A){}, '@VERSION@' ,{use:['aui-diagram-builder-base','aui-diagram-builder-impl'], skinnable:true});
+AUI.add('aui-diagram-builder', function(A){}, '1.5.0' ,{use:['aui-diagram-builder-base','aui-diagram-builder-impl'], skinnable:true});
 

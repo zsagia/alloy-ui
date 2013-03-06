@@ -526,4 +526,4 @@ Color.RGB.prototype = {
 
 A.Color = Color;
 
-}, '@VERSION@' ,{skinnable:false});
+}, '1.5.0' ,{skinnable:false});

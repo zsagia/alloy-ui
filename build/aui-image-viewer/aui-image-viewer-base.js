@@ -1433,4 +1433,4 @@ A.ImageViewer = ImageViewer;
  */
 A.ImageViewerMask = new A.OverlayMask().render();
 
-}, '@VERSION@' ,{skinnable:true, requires:['anim','aui-overlay-mask']});
+}, '1.5.0' ,{skinnable:true, requires:['anim','aui-overlay-mask']});

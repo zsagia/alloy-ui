@@ -212,4 +212,4 @@ var EditorMenuPlugin = A.Component.create(
 
 A.namespace('Plugin').EditorMenu = EditorMenuPlugin;
 
-}, '@VERSION@' ,{requires:['aui-base','editor-base','aui-overlay-context','aui-panel','aui-editor-tools-plugin']});
+}, '1.5.0' ,{requires:['aui-base','editor-base','aui-overlay-context','aui-panel','aui-editor-tools-plugin']});

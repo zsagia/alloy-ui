@@ -423,4 +423,4 @@ var DataTableSelection = A.Base.create("dataTableSelection", A.Plugin.Base, [], 
 
 A.namespace("Plugin").DataTableSelection = DataTableSelection;
 
-}, '@VERSION@' ,{skinnable:true, requires:['aui-datatable-base']});
+}, '1.5.0' ,{skinnable:true, requires:['aui-datatable-base']});

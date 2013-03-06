@@ -533,7 +533,7 @@ var Form = A.Component.create(
 
 A.Form = Form;
 
-}, '@VERSION@' ,{requires:['aui-base','aui-data-set','aui-form-field','querystring-parse','io-form']});
+}, '1.5.0' ,{requires:['aui-base','aui-data-set','aui-form-field','querystring-parse','io-form']});
 AUI.add('aui-form-combobox', function(A) {
 var Lang = A.Lang,
 
@@ -615,7 +615,7 @@ var Combobox = A.Component.create(
 
 A.Combobox = Combobox;
 
-}, '@VERSION@' ,{skinnable:true, requires:['aui-form-textarea','aui-toolbar']});
+}, '1.5.0' ,{skinnable:true, requires:['aui-form-textarea','aui-toolbar']});
 AUI.add('aui-form-field', function(A) {
 var Lang = A.Lang,
 
@@ -1202,7 +1202,7 @@ var Field = A.Component.create(
 
 A.Field = Field;
 
-}, '@VERSION@' ,{requires:['aui-base','aui-component']});
+}, '1.5.0' ,{requires:['aui-base','aui-component']});
 AUI.add('aui-form-select', function(A) {
 var Lang = A.Lang,
 	isArray = Lang.isArray,
@@ -1307,7 +1307,7 @@ var Select = A.Component.create(
 
 A.Select = Select;
 
-}, '@VERSION@' ,{requires:['aui-form-field']});
+}, '1.5.0' ,{requires:['aui-form-field']});
 AUI.add('aui-form-textarea', function(A) {
 var Lang = A.Lang,
 
@@ -1538,7 +1538,7 @@ var Textarea = A.Component.create(
 
 A.Textarea = Textarea;
 
-}, '@VERSION@' ,{skinnable:true, requires:['aui-form-textfield']});
+}, '1.5.0' ,{skinnable:true, requires:['aui-form-textfield']});
 AUI.add('aui-form-textfield', function(A) {
 var Lang = A.Lang,
 
@@ -1662,8 +1662,8 @@ var Textfield = A.Component.create(
 
 A.Textfield = Textfield;
 
-}, '@VERSION@' ,{requires:['aui-form-field']});
+}, '1.5.0' ,{requires:['aui-form-field']});
 
 
-AUI.add('aui-form', function(A){}, '@VERSION@' ,{use:['aui-form-base','aui-form-combobox','aui-form-field','aui-form-select','aui-form-textarea','aui-form-textfield'], skinnable:false});
+AUI.add('aui-form', function(A){}, '1.5.0' ,{use:['aui-form-base','aui-form-combobox','aui-form-field','aui-form-select','aui-form-textarea','aui-form-textfield'], skinnable:false});
 

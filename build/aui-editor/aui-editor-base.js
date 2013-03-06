@@ -78,4 +78,4 @@ var Editor = A.Component.create(
 
 A.Editor = Editor;
 
-}, '@VERSION@' ,{requires:['aui-base','editor-base','aui-editor-toolbar-plugin']});
+}, '1.5.0' ,{requires:['aui-base','editor-base','aui-editor-toolbar-plugin']});

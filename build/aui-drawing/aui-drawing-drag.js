@@ -149,4 +149,4 @@ ELEMENT_PROTOTYPE.undrag = function(onmove, onstart, onend) {
 
 Drawing.Set.addMethod(['drag', 'undrag']);
 
-}, '@VERSION@' ,{requires:['aui-drawing-base','event-gestures']});
+}, '1.5.0' ,{requires:['aui-drawing-base','event-gestures']});
