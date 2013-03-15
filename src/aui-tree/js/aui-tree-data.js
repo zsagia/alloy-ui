@@ -822,6 +822,8 @@ A.mix(TreeData.prototype, {
 					node = instance.createNode(node);
 
 					if (hasChildren && lazyLoad) {
+						node.childrenLength = children.length;
+
 						A.setTimeout(function() {
 							node.set(CHILDREN, children);
 						}, 50);
