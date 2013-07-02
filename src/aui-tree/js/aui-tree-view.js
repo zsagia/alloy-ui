@@ -163,6 +163,8 @@ var TreeView = A.Component.create(
 			bindUI: function() {
 				var instance = this;
 
+				instance.after('childrenChange', A.bind(instance._afterSetChildren, instance));
+
 				instance._delegateDOM();
 			},
 
@@ -191,24 +193,16 @@ var TreeView = A.Component.create(
 			},
 
 			/**
-			 * Sync the TreeView UI. Lifecycle.
+			 * Fires after set children.
 			 *
-			 * @method syncUI
+			 * @method _afterSetChildren
+			 * @param {EventFacade} event
 			 * @protected
 			 */
-			syncUI: function() {
+			_afterSetChildren: function(event) {
 				var instance = this;
 
-				instance.refreshIndex();
-			},
-
-			registerNode: function(node) {
-				var instance = this;
-
-				// when the node is appended to the TreeView set the OWNER_TREE
-				node.set(OWNER_TREE, instance);
-
-				A.TreeView.superclass.registerNode.apply(this, arguments);
+				instance._syncPaginatorUI();
 			},
 
 			/**
