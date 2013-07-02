@@ -6,6 +6,7 @@
  */
 
 var L = A.Lang,
+	isBoolean = L.isBoolean,
 	isString = L.isString,
 
 	BOUNDING_BOX = 'boundingBox',
@@ -655,26 +656,35 @@ var TreeViewDD = A.Component.create(
 				var instance = this;
 				var boundingBox = instance.get(BOUNDING_BOX);
 
-				instance._createDragInitHandler = A.bind(
-					function() {
-						// set init elements as draggable
-						instance.eachChildren(function(child) {
-							if (child.get(DRAGGABLE)) {
-								instance._createDrag( child.get(CONTENT_BOX) );
-							}
-						}, true);
+				instance._createDragInitHandler = function() {
+					instance.ddDelegate = new A.DD.Delegate(
+						{
+							bubbleTargets: instance,
+							container: boundingBox,
+							nodes: DOT+CSS_TREE_NODE_CONTENT,
+							target: true
+						}
+					);
 
-						boundingBox.detach('mouseover', instance._createDragInitHandler);
-					},
-					instance
-				);
+					var dd = instance.ddDelegate.dd;
+
+					dd.plug(A.Plugin.DDProxy, {
+						moveOnEnd: false,
+						positionProxy: false,
+						borderStyle: null
+					})
+					.plug(A.Plugin.DDNodeScroll, {
+						scrollDelay: instance.get(SCROLL_DELAY),
+						node: boundingBox
+					});
+
+					dd.removeInvalid('a');
+
+					dragInitHandle.detach();
+				};
 
 				// only create the drag on the init elements if the user mouseover the boundingBox for init performance reasons
-				boundingBox.on('mouseover', instance._createDragInitHandler);
-
-				// when append new nodes, make them draggable
-				instance.after('insert', A.bind(instance._afterAppend, instance));
-				instance.after('append', A.bind(instance._afterAppend, instance));
+				var dragInitHandle = boundingBox.on(['focus', 'mousedown', 'mousemove'], instance._createDragInitHandler);
 
 				// drag & drop listeners
 				instance.on('drag:align', instance._onDragAlign);
