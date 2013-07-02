@@ -766,6 +766,15 @@ A.mix(TreeData.prototype, {
 				if (!isTreeNode(node) && isObject(node)) {
 					// creating node from json
 					node = instance.createNode(node);
+
+					if (children && children.length) {
+						A.setTimeout(function() {
+							node.setAttrs({
+								leaf: false,
+								children: children
+							});
+						}, 50);
+					}
 				}
 
 				// before render the node, make sure the PARENT_NODE and OWNER_TREE references are updated
