@@ -783,11 +783,10 @@ var DiagramBuilder = A.Component.create({
 
 		_renderGraphic: function() {
 			var instance = this;
-			var graphic = instance.get(GRAPHIC);
-			var canvas = instance.get(CANVAS);
+			var graphic = instance.get(GRAPHIC);    
 
-			graphic.render(canvas);
-			A.one(canvas).on(CLICK, A.bind(instance._onCanvasClick, instance));
+			graphic.render(instance.get(CANVAS));
+			A.one(graphic.get(NODE)).on(CLICK, A.bind(instance._onCanvasClick, instance));
 		},
 
 		_setConnector: function(val) {
