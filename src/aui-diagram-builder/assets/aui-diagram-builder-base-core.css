@@ -66,6 +66,10 @@
 	position: relative;
 }
 
+.aui-diagram-builder-canvas group {
+    top: 0;
+}
+
 .aui-diagram-builder-fields-container {
 	margin: 5px;
 }
