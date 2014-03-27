@@ -8,6 +8,7 @@ var Lang = A.Lang,
 	CSS_VIDEO_NODE = getClassName(NAME, 'node'),
 
 	DEFAULT_PLAYER_PATH = A.config.base + 'aui-video/assets/player.swf?t=' + Lang.now(),
+	PLAYER_FLASH_VERSION = '9,0,0,0',
 
 	DOC = A.config.doc,
 
@@ -36,6 +37,9 @@ var Video = A.Component.create(
 			},
 			flashVars: {
 				value: {}
+			},
+			playerFlashVersion: {
+				value: PLAYER_FLASH_VERSION
 			},
 			render: {
 				value: true
@@ -107,7 +111,9 @@ var Video = A.Component.create(
 					var tplObj = '<object id="' + instance._swfId + '" ';
 
 					if (UA.ie) {
-						tplObj += 'classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" ';
+						tplObj += 'classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" ' +
+							'codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=' +
+							instance.get('playerFlashVersion') + '" ';
 					}
 					else {
 						tplObj += 'type="application/x-shockwave-flash" data="' + swfUrl + '" ';
