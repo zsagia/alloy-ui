@@ -123,6 +123,12 @@ YUI.add('aui-scheduler-tests', function(Y) {
                 'The previous date should have a smaller offset'
             );
 
+            Y.Assert.areEqual(
+                1,
+                DateMath.getDayOffset(prevDate, curDate),
+                'It should give back 1 instead of 0'
+            );
+
             return curDate;
         },
 
