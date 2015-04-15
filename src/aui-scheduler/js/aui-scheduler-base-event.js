@@ -16,6 +16,12 @@ var Lang = A.Lang,
     Color = A.Color,
     DateMath = A.DataType.DateMath,
 
+    CalendarWorkflow = {
+        STATUS_APPROVED: 0,
+        STATUS_MAYBE: 9,
+        STATUS_PENDING: 1
+    },
+
     getUSDateFormat = function(date) {
         var format = ['%l'];
 
@@ -429,6 +435,9 @@ var SchedulerEvent = A.Component.create({
 
             instance._uiSetRepeated(
                 instance.get('repeated'));
+
+            instance._uiSetStatus(
+                instance.get('status'));
 
             instance._uiSetVisible(
                 instance.get('visible'));
@@ -1140,6 +1149,21 @@ var SchedulerEvent = A.Component.create({
             var instance = this;
 
             instance.get('node').toggleClass(CSS_SCHEDULER_EVENT_REPEATED, !! val);
+        },
+
+        /**
+         * Sets `status` on the UI.
+         *
+         * @method _uiSetStatus
+         * @param {Number} val The value of the property.
+         * @protected
+         */
+        _uiSetStatus: function(val) {
+            var instance = this;
+
+            instance.get('node').toggleClass('calendar-portlet-event-approved', (val === CalendarWorkflow.STATUS_APPROVED));
+            instance.get('node').toggleClass('calendar-portlet-event-maybe', (val === CalendarWorkflow.STATUS_MAYBE));
+            instance.get('node').toggleClass('calendar-portlet-event-pending', (val === CalendarWorkflow.STATUS_PENDING));
         },
 
         /**
