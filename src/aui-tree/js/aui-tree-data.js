@@ -262,6 +262,9 @@ A.mix(TreeData.prototype, {
 
 		if (isTreeView(instance)) {
 			node.addTarget(instance);
+
+			// when the node is appended to the TreeView set the OWNER_TREE
+			node.set(OWNER_TREE, instance);
 		}
 
 		node._inheritOwnerTreeAttrs();
