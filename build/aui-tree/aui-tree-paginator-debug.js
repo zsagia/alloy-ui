@@ -209,4 +209,4 @@ TreeViewPaginator.prototype = {
 
 A.TreeViewPaginator = TreeViewPaginator;
 
-}, '@VERSION@' ,{skinnable:false, requires:['aui-base']});
+}, '@VERSION@' ,{requires:['aui-base'], skinnable:false});

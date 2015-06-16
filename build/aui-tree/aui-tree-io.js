@@ -236,4 +236,4 @@ TreeViewIO.prototype = {
 
 A.TreeViewIO = TreeViewIO;
 
-}, '@VERSION@' ,{skinnable:false, requires:['aui-io','json']});
+}, '@VERSION@' ,{requires:['aui-io','json'], skinnable:false});

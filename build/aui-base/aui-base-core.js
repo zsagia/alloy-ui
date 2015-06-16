@@ -1,6 +1,6 @@
 ;(function() {
 	/*
-	 * Alloy JavaScript Library v1.5.0
+	 * Alloy JavaScript Library v@VERSION@
 	 * http://alloy.liferay.com/
 	 *
 	 * Copyright (c) 2010 Liferay Inc.
@@ -501,4 +501,4 @@ A.fn = function(fn, context, args) {
 	return wrappedFn;
 };
 
-}, '1.5.0' ,{skinnable:false, requires:['aui-classnamemanager','aui-node','aui-component','aui-debounce','aui-delayed-task','aui-selector','aui-event-base','oop','yui-throttle']});
+}, '@VERSION@' ,{requires:['aui-classnamemanager','aui-node','aui-component','aui-debounce','aui-delayed-task','aui-selector','aui-event-base','oop','yui-throttle'], skinnable:false});

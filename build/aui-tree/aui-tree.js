@@ -263,6 +263,9 @@ A.mix(TreeData.prototype, {
 
 		if (isTreeView(instance)) {
 			node.addTarget(instance);
+
+			// when the node is appended to the TreeView set the OWNER_TREE
+			node.set(OWNER_TREE, instance);
 		}
 
 		node._inheritOwnerTreeAttrs();
@@ -851,7 +854,7 @@ A.mix(TreeData.prototype, {
 
 A.TreeData = TreeData;
 
-}, '@VERSION@' ,{skinnable:false, requires:['aui-base','aui-task-manager']});
+}, '@VERSION@' ,{requires:['aui-base','aui-task-manager'], skinnable:false});
 AUI.add('aui-tree-node', function(A) {
 /**
  * The TreeNode Utility
@@ -2564,7 +2567,7 @@ A.TreeNode.nodeTypes = {
 	task: A.TreeNodeTask
 };
 
-}, '@VERSION@' ,{skinnable:false, requires:['aui-tree-data','aui-tree-io','aui-tree-paginator','json','querystring-stringify']});
+}, '@VERSION@' ,{requires:['aui-tree-data','aui-tree-io','aui-tree-paginator','json','querystring-stringify'], skinnable:false});
 AUI.add('aui-tree-paginator', function(A) {
 var Lang = A.Lang,
 	isObject = Lang.isObject,
@@ -2776,7 +2779,7 @@ TreeViewPaginator.prototype = {
 
 A.TreeViewPaginator = TreeViewPaginator;
 
-}, '@VERSION@' ,{skinnable:false, requires:['aui-base']});
+}, '@VERSION@' ,{requires:['aui-base'], skinnable:false});
 AUI.add('aui-tree-view', function(A) {
 /**
  * The TreeView Utility
@@ -4034,8 +4037,8 @@ TreeViewIO.prototype = {
 
 A.TreeViewIO = TreeViewIO;
 
-}, '@VERSION@' ,{skinnable:false, requires:['aui-io','json']});
+}, '@VERSION@' ,{requires:['aui-io','json'], skinnable:false});
 
 
-AUI.add('aui-tree', function(A){}, '@VERSION@' ,{skinnable:true, use:['aui-tree-data', 'aui-tree-node', 'aui-tree-io', 'aui-tree-paginator', 'aui-tree-view']});
+AUI.add('aui-tree', function(A){}, '@VERSION@' ,{use:['aui-tree-data', 'aui-tree-node', 'aui-tree-io', 'aui-tree-paginator', 'aui-tree-view'], skinnable:true});
 

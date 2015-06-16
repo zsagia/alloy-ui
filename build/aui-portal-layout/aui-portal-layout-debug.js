@@ -20,7 +20,10 @@ var Lang = A.Lang,
 
 	APPEND = 'append',
 	CIRCLE = 'circle',
+	COLUMN_CLASS = 'portlet-column',
+	COLUMN_ITEM_CLASS = 'portlet-boundary',
 	DELEGATE_CONFIG = 'delegateConfig',
+	DOT = '.',
 	DOWN = 'down',
 	DRAG = 'drag',
 	DRAG_NODE = 'dragNode',
@@ -347,13 +350,27 @@ var PortalLayout = A.Component.create(
 			calculateQuadrant: function(drag, drop) {
 				var instance = this;
 				var quadrant = 1;
-				var region = drop.get(NODE).get(REGION);
+				var dropNode = drop.get(NODE);
+				var region = dropNode.get(REGION);
 				var mouseXY = drag.mouseXY;
 				var mouseX = mouseXY[0];
 				var mouseY = mouseXY[1];
 
 				var top = region.top;
 				var left = region.left;
+
+				if (dropNode.hasClass(COLUMN_CLASS)) {
+					var portletsInColumn = dropNode.all(DOT + COLUMN_ITEM_CLASS);
+
+					if (!portletsInColumn.isEmpty()) {
+						var lastPortletInColumn = portletsInColumn.item(portletsInColumn.size() - 1);
+
+						region.bottom = lastPortletInColumn.get(REGION).bottom;
+					}
+					else {
+						region.bottom = top;
+					}
+				}
 
 				// (region.bottom - top) finds the height of the region
 				var vCenter = top + (region.bottom - top)/2;
@@ -724,4 +741,4 @@ var PortalLayout = A.Component.create(
 
 A.PortalLayout = PortalLayout;
 
-}, '1.5.0' ,{skinnable:true, requires:['aui-base','dd-drag','dd-delegate','dd-drop','dd-proxy']});
+}, '@VERSION@' ,{requires:['aui-base','dd-drag','dd-delegate','dd-drop','dd-proxy'], skinnable:true});

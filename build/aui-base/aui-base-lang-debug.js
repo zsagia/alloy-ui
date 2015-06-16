@@ -429,4 +429,4 @@ A.map = function(obj, fn, context) {
 	return module.map.apply(this, arguments);
 };
 
-}, '1.5.0' ,{skinnable:false});
+}, '@VERSION@' ,{skinnable:false});
