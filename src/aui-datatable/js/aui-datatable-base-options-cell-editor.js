@@ -222,13 +222,13 @@ BaseOptionsCellEditor = A.Component.create({
             if (editContainer) {
                 var names = editContainer.all('.' + CSS_CELLEDITOR_EDIT_INPUT_NAME);
                 var values = editContainer.all('.' + CSS_CELLEDITOR_EDIT_INPUT_VALUE);
-                var options = {};
+                var options = [];
 
                 names.each(function(inputName, index) {
                     var name = inputName.val();
                     var value = values.item(index).val();
 
-                    options[value] = name;
+                    options.push({'name': name, 'value': value});
                 });
 
                 instance.set('options', options);
@@ -268,7 +268,10 @@ BaseOptionsCellEditor = A.Component.create({
             var optionTpl = instance.OPTION_TEMPLATE;
             var optionWrapperTpl = instance.OPTION_WRAPPER;
 
-            A.each(val, function(oLabel, oValue) {
+            A.each(val, function(option) {
+                var oLabel = option.name;
+                var oValue = option.value;
+
                 var values = {
                     id: A.guid(),
                     label: AEscape.html(oLabel),
@@ -320,8 +323,8 @@ BaseOptionsCellEditor = A.Component.create({
                 })
             );
 
-            A.each(instance.get('options'), function(name, value) {
-                buffer.push(instance._createEditOption(name, value));
+            A.each(instance.get('options'), function(option) {
+                buffer.push(instance._createEditOption(option.name, option.value));
             });
 
             buffer.push(
@@ -504,15 +507,23 @@ BaseOptionsCellEditor = A.Component.create({
          * @protected
          */
         _setOptions: function(val) {
-            var options = {};
+            var options = [];
 
             if (L.isArray(val)) {
-                A.Array.each(val, function(value) {
-                    options[value] = value;
+                A.Array.some(val, function(value) {
+                    if (L.isObject(value)) {
+                        options = val;
+                        return true;
+                    }
+
+                    options.push({'name': value, 'value': value});
+                    return false;
                 });
             }
             else if (L.isObject(val)) {
-                options = val;
+                A.Object.each(val, function(value, key) {
+                    options.push({'name': value, 'value': key});
+                })
             }
 
             return options;
