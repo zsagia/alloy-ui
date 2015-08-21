@@ -15,16 +15,7 @@ var Lang = A.Lang,
     getCN = A.getClassName,
 
     getEditorOptions = function(val) {
-        var options = {};
-
-        AArray.each(
-            val,
-            function(item) {
-                options[item.value] = item.label;
-            }
-        );
-
-        return options;
+        return val;
     },
 
     CSS_FORM_BUILDER_FIELD = getCN('form-builder', 'field'),
@@ -305,30 +296,7 @@ var FormBuilderMultipleChoiceField = A.Component.create({
                     },
                     options: getEditorOptions(options),
                     inputFormatter: function() {
-                        var input = [];
-
-                        A.each(
-                            this.get('options'),
-                            function(item, index) {
-                                var option = {
-                                    label: item,
-                                    value: index
-                                };
-
-                                AArray.each(
-                                    options,
-                                    function(oItem) {
-                                        if (oItem.value === index) {
-                                            option = A.merge(oItem, option);
-                                        }
-                                    }
-                                );
-
-                                input.push(option);
-                            }
-                        );
-
-                        return input;
+                        return this.get('options');
                     }
                 }),
                 formatter: function(o) {
@@ -373,12 +341,7 @@ var FormBuilderMultipleChoiceField = A.Component.create({
          * @protected
          */
         _normalizeValues: function(values) {
-            return A.map(values, function(label, value) {
-                return {
-                    label: label,
-                    value: value
-                };
-            });
+            return values;
         },
 
         /**
