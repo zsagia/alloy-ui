@@ -15,7 +15,10 @@ var BaseOptionsCellEditor,
     CSS_CELLEDITOR_EDIT_LINK = A.getClassName('celleditor', 'edit', 'link'),
     CSS_CELLEDITOR_EDIT_OPTION_ROW = A.getClassName('celleditor', 'edit', 'option', 'row'),
     CSS_ICON = A.getClassName('glyphicon'),
-    CSS_ICON_GRIP_DOTTED_VERTICAL = A.getClassName('glyphicon', 'resize', 'vertical');
+    CSS_ICON_GRIP_DOTTED_VERTICAL = A.getClassName('glyphicon', 'resize', 'vertical'),
+
+    OPTION_ATTRIBUTE_LABEL = 'label',
+    OPTION_ATTRIBUTE_VALUE = 'value';
 
 /**
  * Abstract class `A.BaseOptionsCellEditor` for options attribute support.
@@ -222,13 +225,13 @@ BaseOptionsCellEditor = A.Component.create({
             if (editContainer) {
                 var names = editContainer.all('.' + CSS_CELLEDITOR_EDIT_INPUT_NAME);
                 var values = editContainer.all('.' + CSS_CELLEDITOR_EDIT_INPUT_VALUE);
-                var options = {};
+                var options = [];
 
                 names.each(function(inputName, index) {
                     var name = inputName.val();
                     var value = values.item(index).val();
 
-                    options[value] = name;
+                    options.push(instance._createOption(name, value));
                 });
 
                 instance.set('options', options);
@@ -268,7 +271,10 @@ BaseOptionsCellEditor = A.Component.create({
             var optionTpl = instance.OPTION_TEMPLATE;
             var optionWrapperTpl = instance.OPTION_WRAPPER;
 
-            A.each(val, function(oLabel, oValue) {
+            A.each(val, function(option) {
+                var oLabel = option[OPTION_ATTRIBUTE_LABEL];
+                var oValue = option[OPTION_ATTRIBUTE_VALUE];
+
                 var values = {
                     id: A.guid(),
                     label: AEscape.html(oLabel),
@@ -320,8 +326,8 @@ BaseOptionsCellEditor = A.Component.create({
                 })
             );
 
-            A.each(instance.get('options'), function(name, value) {
-                buffer.push(instance._createEditOption(name, value));
+            A.each(instance.get('options'), function(option) {
+                buffer.push(instance._createEditOption(option[OPTION_ATTRIBUTE_LABEL], option[OPTION_ATTRIBUTE_VALUE]));
             });
 
             buffer.push(
@@ -356,6 +362,25 @@ BaseOptionsCellEditor = A.Component.create({
                     valueValue: AEscape.html(value)
                 }
             );
+        },
+
+        /**
+         * Create option for the options attribute.
+         *
+         * @method _createOption
+         * @param {String} name
+         * @param {String} value
+         * @protected
+         * @return {Object} containing the name-value pair
+         */
+        _createOption: function(name, value) {
+            var instance = this;
+            var option = {};
+
+            option[OPTION_ATTRIBUTE_LABEL] = name;
+            option[OPTION_ATTRIBUTE_VALUE] = value;
+
+            return option;
         },
 
         /**
@@ -504,15 +529,24 @@ BaseOptionsCellEditor = A.Component.create({
          * @protected
          */
         _setOptions: function(val) {
-            var options = {};
+            var instance = this;
+            var options = [];
 
             if (L.isArray(val)) {
-                A.Array.each(val, function(value) {
-                    options[value] = value;
+                A.Array.some(val, function(value) {
+                    if (L.isObject(value)) {
+                        options = val;
+                        return true;
+                    }
+
+                    options.push(instance._createOption(value, value));
+                    return false;
                 });
             }
             else if (L.isObject(val)) {
-                options = val;
+                A.Object.each(val, function(value, key) {
+                    options.push(instance._createOption(value, key));
+                })
             }
 
             return options;
