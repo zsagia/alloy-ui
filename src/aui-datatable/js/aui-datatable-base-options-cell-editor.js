@@ -374,7 +374,6 @@ BaseOptionsCellEditor = A.Component.create({
          * @return {Object} containing the name-value pair
          */
         _createOption: function(name, value) {
-            var instance = this;
             var option = {};
 
             option[OPTION_ATTRIBUTE_LABEL] = name;
@@ -536,17 +535,19 @@ BaseOptionsCellEditor = A.Component.create({
                 A.Array.some(val, function(value) {
                     if (L.isObject(value)) {
                         options = val;
+
                         return true;
                     }
 
                     options.push(instance._createOption(value, value));
+
                     return false;
                 });
             }
             else if (L.isObject(val)) {
                 A.Object.each(val, function(value, key) {
                     options.push(instance._createOption(value, key));
-                })
+                });
             }
 
             return options;
