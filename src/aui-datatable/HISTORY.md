@@ -4,7 +4,7 @@
 
 ## @VERSION@
 
-No registries yet.
+* [AUI-1953](https://issues.liferay.com/browse/AUI-1953) Unable to have same 'value' for Select with different name/option
 
 ## [3.0.1](https://github.com/liferay/alloy-ui/releases/tag/3.0.1)
 
