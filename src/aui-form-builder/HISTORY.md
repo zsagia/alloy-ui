@@ -4,6 +4,7 @@
 
 ## @VERSION@
 
+* [AUI-1953](https://issues.liferay.com/browse/AUI-1953) Unable to have same 'value' for Select with different name/option
 * [AUI-1951](https://issues.liferay.com/browse/AUI-1951) Add attribute mode on Form Builder Pages
 * [AUI-1930](https://issues.liferay.com/browse/AUI-1930) Change functionality of add cols
 * [AUI-1931](https://issues.liferay.com/browse/AUI-1931) Add Tabs View mode
