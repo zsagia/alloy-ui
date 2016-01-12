@@ -1463,11 +1463,7 @@ var BaseOptionsCellEditor = A.Component.create({
                     options[value] = name;
                 });
 
-                instance.set(OPTIONS, options);
-
-                instance._uiSetValue(
-                    instance.get(VALUE)
-                );
+                instance.set('options', options);
 
                 if (instance.get('hideEditContainerOnSave')) {
                     instance.toggleEdit();
