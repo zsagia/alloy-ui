@@ -1196,6 +1196,18 @@ var BaseOptionsCellEditor = A.Component.create({
     ATTRS: {
 
         /**
+         * Indicates if the options Edit Container is hidden on the `save` event.
+         *
+         * @attribute hideEditContainerOnSave
+         * @default true
+         * @type Boolean
+         */
+        hideEditContainerOnSave: {
+            value: true,
+            validator: A.Lang.isBoolean
+        },
+
+        /**
          * TODO. Wanna help? Please send a Pull Request.
          *
          * @attribute inputFormatter
@@ -1457,7 +1469,9 @@ var BaseOptionsCellEditor = A.Component.create({
                     instance.get(VALUE)
                 );
 
-                instance.toggleEdit();
+                if (instance.get('hideEditContainerOnSave')) {
+                    instance.toggleEdit();
+                }
             }
         },
 
