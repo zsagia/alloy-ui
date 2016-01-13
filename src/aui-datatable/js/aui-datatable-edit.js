@@ -621,7 +621,7 @@ var BaseCellEditor = A.Component.create({
          */
         destructor: function() {
             var hDocEscKey = this._hDocEscKeyEv,
-                hDocMouseDown = this._hDocMouseDownEv,
+                hDocMouseDown = this._hDocMouseDownEv;
             var toolbar = instance.toolbar;
             var validator = instance.validator;
 
