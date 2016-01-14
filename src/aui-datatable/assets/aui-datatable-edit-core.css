@@ -35,12 +35,13 @@
     margin-bottom: 0.5em;
 }
 
-.celleditor-edit-option-row .form-group {
+.celleditor-edit-option-row .control-group {
     margin-left: 0;
 }
 
-.celleditor-edit-option-row .form-group + .form-group {
+.celleditor-edit-option-row .control-group + .control-group {
     margin-left: 0.5em;
+    display: inline-block;
 }
 
 .celleditor-edit .form-validator-stack {
@@ -50,4 +51,10 @@
     overflow: hidden;
     position: absolute;
     right: 1em;
+}
+
+.basecelleditor input[type="checkbox"], .basecelleditor input[type="radio"] {
+    position: inherit;
+    margin-left: 0;
+    margin-right: 5px;
 }

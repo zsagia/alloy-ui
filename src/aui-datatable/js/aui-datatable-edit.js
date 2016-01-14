@@ -1379,24 +1379,24 @@ var BaseOptionsCellEditor = A.Component.create({
         EDIT_TEMPLATE: '<div class="' + CSS_CELLEDITOR_EDIT + '"></div>',
 
         EDIT_OPTION_ROW_TEMPLATE: '<div class="form-inline ' + CSS_CELLEDITOR_EDIT_OPTION_ROW + '">' +
-                '<div class="form-group">' +
+                '<div class="control-group">' +
                     '<span class="' + [CSS_CELLEDITOR_EDIT_DD_HANDLE, CSS_ICON, CSS_ICON_GRIP_DOTTED_VERTICAL].join(' ') + '"></span>' +
                 '</div>' +
-                '<div class="form-group">' +
+                '<div class="control-group">' +
                     '<label class="sr-only" for="{optionValueName}_name">{labelOptionName}</label>' +
                     '<input class="' + CSS_CELLEDITOR_EDIT_INPUT_NAME + ' form-control input-sm" size="7" id="{optionValueName}_name" placeholder="{titleName}" title="{titleName}" type="text" value="{valueName}" /> ' +
                 '</div>' +
-                '<div class="form-group">' +
+                '<div class="control-group">' +
                     '<label class="sr-only" for="{optionValueName}">{labelOptionValue}</label>' +
                     '<input class="' + CSS_CELLEDITOR_EDIT_INPUT_VALUE + ' form-control input-sm" id="{optionValueName}" name="{optionValueName}" placeholder="{titleValue}" size="7" title="{titleValue}" type="text" value="{valueValue}" /> ' +
                 '</div>' +
-                '<div class="form-group">' +
+                '<div class="control-group">' +
                     '<button aria-label="{remove}" class="close ' + [CSS_CELLEDITOR_EDIT_LINK, CSS_CELLEDITOR_EDIT_DELETE_OPTION].join(' ') + '" type="button"><span aria-hidden="true">&times;</span></button>' +
                 '</div>' +
             '</div>' +
         '</div>',
 
-        EDIT_ADD_LINK_TEMPLATE: '<div class="form-group"><a class="' + [CSS_CELLEDITOR_EDIT_LINK, CSS_CELLEDITOR_EDIT_ADD_OPTION].join(
+        EDIT_ADD_LINK_TEMPLATE: '<div class="control-group"><a class="' + [CSS_CELLEDITOR_EDIT_LINK, CSS_CELLEDITOR_EDIT_ADD_OPTION].join(
             ' ') + '" href="javascript:void(0);">{addOption}</a></div> ',
         EDIT_LABEL_TEMPLATE: '<div class="' + CSS_CELLEDITOR_EDIT_LABEL + '">{editOptions}</div>',
 

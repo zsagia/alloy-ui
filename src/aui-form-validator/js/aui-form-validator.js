@@ -41,6 +41,7 @@ var Lang = A.Lang,
     EV_VALID_FIELD = 'validField',
 
     ARIA_REQUIRED = 'aria-required',
+    BLOCK = 'block',
     BOUNDING_BOX = 'boundingBox',
     CHECKBOX = 'checkbox',
     CONTAINER_ERROR_CLASS = 'containerErrorClass',
@@ -53,6 +54,7 @@ var Lang = A.Lang,
     FIELD_STRINGS = 'fieldStrings',
     FOCUS = 'focus',
     GROUP = 'group',
+    HAS = 'has',
     HELP = 'help',
     INLINE = 'inline',
     LABEL_CSS_CLASS = 'labelCssClass',
@@ -76,15 +78,16 @@ var Lang = A.Lang,
     getCN = A.getClassName,
 
     CSS_CONTROL_GROUP = getCN(CONTROL, GROUP),
-    CSS_ERROR = getCN(ERROR),
+    CSS_ERROR = getCN(HAS, ERROR),
     CSS_ERROR_FIELD = getCN(ERROR, FIELD),
     CSS_SUCCESS = getCN(SUCCESS),
     CSS_SUCCESS_FIELD = getCN(SUCCESS, FIELD),
+    CSS_HELP_BLOCK = getCN(HELP, BLOCK),
     CSS_HELP_INLINE = getCN(HELP, INLINE),
     CSS_STACK = getCN(FORM_VALIDATOR, STACK),
 
     TPL_MESSAGE = '<div role="alert"></div>',
-    TPL_STACK_ERROR = '<div class="' + [CSS_STACK, CSS_HELP_INLINE].join(_SPACE) + '"></div>';
+    TPL_STACK_ERROR = '<div class="' + [CSS_STACK, CSS_HELP_BLOCK].join(_SPACE) + '"></div>';
 
 A.mix(defaults, {
     STRINGS: {
