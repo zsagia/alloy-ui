@@ -37,6 +37,8 @@
 
 .celleditor-edit-option-row .control-group {
     margin-left: 0;
+    margin-bottom: 0;
+    display: inline-block;
 }
 
 .celleditor-edit-option-row .control-group + .control-group {
