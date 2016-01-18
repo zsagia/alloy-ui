@@ -60,3 +60,11 @@
     margin-left: 0;
     margin-right: 5px;
 }
+
+.celleditor-edit .control-group .help-block {
+    color: #CC6677;
+}
+
+.celleditor-edit .has-error .error-field {
+    border-color: #CC6677;
+}
