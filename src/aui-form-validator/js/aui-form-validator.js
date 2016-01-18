@@ -12,6 +12,7 @@ var Lang = A.Lang,
     isDate = Lang.isDate,
     isEmpty = AObject.isEmpty,
     isFunction = Lang.isFunction,
+    isNode = function(val) {return A.instanceOf(val, A.Node); },
     isObject = Lang.isObject,
     isString = Lang.isString,
     trim = Lang.trim,
@@ -40,6 +41,7 @@ var Lang = A.Lang,
     EV_VALID_FIELD = 'validField',
 
     ARIA_REQUIRED = 'aria-required',
+    BLOCK = 'block',
     BOUNDING_BOX = 'boundingBox',
     CHECKBOX = 'checkbox',
     CONTAINER_ERROR_CLASS = 'containerErrorClass',
@@ -52,6 +54,7 @@ var Lang = A.Lang,
     FIELD_STRINGS = 'fieldStrings',
     FOCUS = 'focus',
     GROUP = 'group',
+    HAS = 'has',
     HELP = 'help',
     INLINE = 'inline',
     LABEL_CSS_CLASS = 'labelCssClass',
@@ -75,15 +78,16 @@ var Lang = A.Lang,
     getCN = A.getClassName,
 
     CSS_CONTROL_GROUP = getCN(CONTROL, GROUP),
-    CSS_ERROR = getCN(ERROR),
+    CSS_ERROR = getCN(HAS, ERROR),
     CSS_ERROR_FIELD = getCN(ERROR, FIELD),
     CSS_SUCCESS = getCN(SUCCESS),
     CSS_SUCCESS_FIELD = getCN(SUCCESS, FIELD),
+    CSS_HELP_BLOCK = getCN(HELP, BLOCK),
     CSS_HELP_INLINE = getCN(HELP, INLINE),
     CSS_STACK = getCN(FORM_VALIDATOR, STACK),
 
     TPL_MESSAGE = '<div role="alert"></div>',
-    TPL_STACK_ERROR = '<div class="' + [CSS_STACK, CSS_HELP_INLINE].join(_SPACE) + '"></div>';
+    TPL_STACK_ERROR = '<div class="' + [CSS_STACK, CSS_HELP_BLOCK].join(_SPACE) + '"></div>';
 
 A.mix(defaults, {
     STRINGS: {
@@ -452,25 +456,6 @@ var FormValidator = A.Component.create({
     },
 
     /**
-     * Creates custom rules from user input.
-     *
-     * @method _setCustomRules
-     * @param object
-     * @protected
-     */
-    _setCustomRules: function(object) {
-        var instance = this;
-
-        A.each(
-            object,
-            function(rule, fieldName) {
-                A.config.FormValidator.RULES[fieldName] = rule.condition;
-                A.config.FormValidator.STRINGS[fieldName] = rule.errorMessage;
-            }
-        );
-    },
-
-    /**
      * Ability to add custom validation rules.
      *
      * @method customRules
@@ -480,10 +465,27 @@ var FormValidator = A.Component.create({
      */
     addCustomRules: function(object) {
         var instance = this;
-
         if (isObject(object)) {
             instance._setCustomRules(object);
         }
+    },
+
+    /**
+     * Creates custom rules from user input.
+     *
+     * @method _setCustomRules
+     * @param object
+     * @protected
+     */
+    _setCustomRules: function(object) {
+        var instance = this;
+        A.each(
+            object,
+            function(rule, fieldName) {
+                A.config.FormValidator.RULES[fieldName] = rule.condition;
+                A.config.FormValidator.STRINGS[fieldName] = rule.errorMessage;
+            }
+        );
     },
 
     /**
@@ -591,15 +593,17 @@ var FormValidator = A.Component.create({
         },
 
         /**
-         * TODO. Wanna help? Please send a Pull Request.
+         * Deletes the field from the errors property object.
          *
          * @method clearFieldError
-         * @param field
+         * @param {Node|String} field
          */
         clearFieldError: function(field) {
-            var instance = this;
+            var fieldName = isNode(field) ? field.get('name') : field;
 
-            delete instance.errors[field.get(NAME)];
+            if (isString(fieldName)) {
+                delete this.errors[fieldName];
+            }
         },
 
         /**
@@ -858,26 +862,29 @@ var FormValidator = A.Component.create({
 
             instance.eachRule(
                 function(rule, fieldName) {
-                    var field = instance.getField(fieldName);
-
-                    instance.resetField(field);
+                    instance.resetField(fieldName);
                 }
             );
         },
 
         /**
-         * TODO. Wanna help? Please send a Pull Request.
+         * Resets the CSS class and error status of a field.
          *
          * @method resetField
-         * @param field
+         * @param {Node|String} field
          */
         resetField: function(field) {
-            var instance = this,
-                stackContainer = instance.getFieldStackErrorContainer(field);
+            var fieldNode,
+                stackContainer;
 
-            stackContainer.remove();
-            instance.resetFieldCss(field);
-            instance.clearFieldError(field);
+            this.clearFieldError(field);
+            fieldNode = isString(field) ? this.getField(field) : field;
+
+            if (isNode(fieldNode)) {
+                stackContainer = this.getFieldStackErrorContainer(fieldNode);
+                stackContainer.remove();
+                this.resetFieldCss(fieldNode);
+            }
         },
 
         /**
@@ -948,16 +955,17 @@ var FormValidator = A.Component.create({
          * @param field
          */
         validateField: function(field) {
-            var instance = this,
-                fieldNode = instance.getField(field);
+            var fieldNode,
+                validatable;
 
-            if (fieldNode) {
-                var validatable = instance.validatable(fieldNode);
+            this.resetField(field);
+            fieldNode = isString(field) ? this.getField(field) : field;
 
-                instance.resetField(fieldNode);
+            if (isNode(fieldNode)) {
+                validatable = this.validatable(fieldNode);
 
                 if (validatable) {
-                    instance.fire(EV_VALIDATE_FIELD, {
+                    this.fire('validateField', {
                         validator: {
                             field: fieldNode
                         }
