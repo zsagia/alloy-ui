@@ -602,6 +602,47 @@ YUI.add('aui-form-validator-tests', function(Y) {
             Y.Assert.isFalse(input.hasClass('success-field'));
         },
 
+        /*
+         * Check if second validator with empty rules resets the error status of a field.
+         * @tests AUI-2272
+         */
+        'test two validators on the same form': function() {
+            var form = Y.Node.create(
+                    '<form><input name="inputField" id="inputField" type="text"></form>'),
+                input = form.one('input');
+
+            new Y.FormValidator({
+                boundingBox: form,
+                rules: {
+                    inputField: {
+                        required: true
+                    }
+                }
+            });
+
+            input.simulate('blur');
+
+            Y.Assert.isTrue(
+                input.hasClass('error-field'),
+                'There should be an error-field class on the form with one validator after blur');
+
+            new Y.FormValidator({
+                boundingBox: form
+            });
+
+            input.simulate('submit');
+
+            Y.Assert.isTrue(
+                input.hasClass('error-field'),
+                'There should be an error-field class on the form with two validators after submit');
+
+            input.simulate('blur');
+
+            Y.Assert.isTrue(
+                input.hasClass('error-field'),
+                'There should be an error-field class on the form with two validators after blur');
+        },
+
         _assertValidatorNextLabel: function(input) {
             var inputNode,
                 textNode;
