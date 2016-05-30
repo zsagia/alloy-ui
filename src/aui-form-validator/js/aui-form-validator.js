@@ -1002,20 +1002,19 @@ var FormValidator = A.Component.create({
          * @param {Node|String} field
          */
         validateField: function(field) {
-            var fieldName,
-                fieldNode,
+            var fieldNode,
                 fieldRules,
                 validatable;
 
             fieldNode = isString(field) ? this.getField(field) : field;
-            fieldName = fieldNode.get('name');
-            fieldRules = this.get('rules')[fieldName];
-
-            if (fieldRules) {
-                this.resetField(field);
-            }
 
             if (isNode(fieldNode)) {
+                fieldRules = this.get('rules')[fieldNode.get('name')];
+
+                if (fieldRules) {
+                    this.resetField(field);
+                }
+
                 validatable = this.validatable(fieldNode);
 
                 if (validatable) {
