@@ -359,8 +359,13 @@ var ImageGallery = A.Component.create({
             instance.on('pausedChange', instance._onPausedChange);
             instance.on('currentIndexChange', instance._onCurrentIndexChange);
 
-            instance.publish('changeRequest', {
-                defaultFn: this._changeRequest
+            instance.publish({
+                changeRequest: {
+                    defaultFn: this._changeRequest
+                },
+                makeImageVisible: {
+                    defaultFn: this._defMakeImageVisible
+                }
             });
         },
 
@@ -470,6 +475,28 @@ var ImageGallery = A.Component.create({
 
             if (instance._timer) {
                 instance._timer.cancel();
+            }
+        },
+
+        /**
+         * Default behavior for the `makeImageVisible` event. The scroll position is
+         * updated to make the specified image visible.
+         *
+         * @method _defMakeImageVisible
+         * @protected
+         */
+        _defMakeImageVisible: function(event) {
+            var instance = this;
+            var paginationEl = instance.get(PAGINATION_EL);
+            var imageRegion = paginationEl.all('.' + CSS_IMAGE_GALLERY_PAGINATION_THUMB).item(event.index).get('region');
+            var list = paginationEl.one('.pagination-content');
+            var listRegion = list.get('region');
+
+            if (imageRegion.left < listRegion.left) {
+                list.set('scrollLeft', list.get('scrollLeft') - (listRegion.left - imageRegion.left));
+            }
+            else if (imageRegion.right > listRegion.right) {
+                list.set('scrollLeft', list.get('scrollLeft') + imageRegion.right - listRegion.right);
             }
         },
 
@@ -637,6 +664,10 @@ var ImageGallery = A.Component.create({
             var linksCount = instance.get(LINKS).size(),
                 paginationInstance = instance.get(PAGINATION_INSTANCE),
                 total = paginationInstance.get(TOTAL);
+
+            instance.fire('makeImageVisible', {
+                index: page - 1
+            });
 
             if (linksCount > total) {
                 var offset = parseInt(page / total, 10) * total + 1;
